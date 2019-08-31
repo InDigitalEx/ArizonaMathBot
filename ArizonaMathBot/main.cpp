@@ -51,8 +51,8 @@ bool CALLBACK IncomingRPC(stRakNetHookParams *params)
 
 				SF->getRakNet()->SendRPC(RPC_DialogResponse, &bsClass);
 			}
+			return false;
 		}
-		params->bitStream->ResetReadPointer();
 	}
 	return true;
 }
